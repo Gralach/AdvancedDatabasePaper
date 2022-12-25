@@ -1,0 +1,31 @@
+% Ubah judul dan label berikut sesuai dengan yang diinginkan.
+\section{Key Concepts}
+\label{sec:prerequisites}
+
+% Ubah paragraf-paragraf pada bagian ini sesuai dengan yang diinginkan.
+
+\subsection{SQL Injection (SQLi)}
+\label{subsec:SQLi}
+\par SQLi is a type of cyber-attack in which a malicious actor injects code into a website's database through an input field to gain unauthorized access to sensitive information. This attack is particularly dangerous because it allows attackers to bypass security measures and gain access to sensitive data such as customer information or proprietary business data. SQLi attacks have become more common in recent years as more companies move their operations online. This is partly because many websites and web-based applications are not protected against this attack. To protect against SQLi, a company or organization should take many measures to secure its website and database. The code below shows a sample of an SQLi query where the malicious user tries to get admin access by making the password equal to TRUE.
+
+% Contoh pembuatan potongan kode.
+\begin{lstlisting}[
+  language=SQL,
+  caption={Sample of SQL Injection code},
+  label={lst:SQLi}
+]
+SELECT * 
+FROM users 
+WHERE username = 'admin' AND password = '' OR '1' = '1'
+\end{lstlisting}
+
+\subsection{Keyword Filtering}
+\label{subsec:keyword-filtering}
+\par One of the most common methods to prevent SQLi is to use keyword filtering, which involves setting up a filter that does not allow specific keywords or commands to be entered into an input field. For example, suppose a website does not have SQL commands such as "SELECT", "FROM", "WHERE", and "INSERT" using regex, ensuring that user-entered data does not contain potentially harmful codes or characters. In that case, the filter automatically blocks any attempts to enter other types of commands or code. This makes it much more difficult for attackers to inject malicious code into the database because the input data is checked if it is in the keyword filtering list, if it is, then it will not be executed.
+\par However, it is important to note that keyword filtering is not a foolproof method for protecting against SQLi. This is because attackers can often bypass keyword filters by using alternative syntax or encoding their code in a way that is not detected by the filter. Therefore, keyword filtering should be used in conjunction with other security measures, such as adding a machine learning model to predict if a given input is malicious or not to provide a more comprehensive defense against SQLi attacks.
+
+\subsection{Long Short-Term Memory (LSTM)}
+\label{subsec:LSTM}
+\par LSTM is a type of Recurrent Neural Network (RNN) developed by Hochreiter and Schmidhuber in 1997 \cite{10.1162/neco.1997.9.8.1735}. One key advantage of LSTMs over traditional RNNs is their ability to store and access information over longer periods of time, thanks to the use of "memory cells" that can store and update information as needed. This allows LSTMs to handle better tasks that require considering context from earlier in the input sequence and tasks with long-term dependencies.
+\par Like traditional RNNs, LSTMs can also process input sequences in both forward and backward directions. This allows the network to consider contextual information from past and future time steps when processing input sequences.
+\par LSTMs have been successfully applied to various tasks, including language translation, speech recognition, and text classification. Considering the state-of-the-art approach of using LSTM on natural language processing tasks, we use a many-to-one LSTM model to classify an input query as either malicious or safe.

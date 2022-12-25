@@ -1,21 +1,12 @@
-% Mengubah keterangan `Abstract` ke bahasa indonesia.
-% Hapus bagian ini untuk mengembalikan ke format awal.
-\renewcommand\abstractname{Abstrak}
-
 \begin{abstract}
 
   % Ubah paragraf berikut sesuai dengan abstrak dari penelitian.
-  Pada penelitian ini kami mengajukan \lipsum[1][1-12]
-
+  SQL injection (SQLi) attacks are common and destructive attack that allows malicious actors to inject code into a database server through a web application's input field. These attacks can compromise sensitive information and destroy data or even the entire system. To prevent SQLi attacks, developers and security professionals often use input validation and sanitization, which detect and filter out malicious input before the database server processes it. However, these techniques have limitations and must be updated to keep up with new SQLi techniques developed by malicious actors. In this paper, we propose a two-step approach for detecting and preventing SQLi attacks that combines keyword filtering with blacklisting and machine learning prediction using long short-term memory (LSTM). We evaluate the performance of our approach using a public dataset of 30,905 queries and compare it with ten classical machine learning algorithms. Our results show that LSTM performs better than the other algorithms, with an F1 score of 99.53\% on the validation data. While it requires more prediction time, it is still relatively fast at under one millisecond per query. We also find that the additional use of keyword filtering increases the predictive performance, but the increase is insignificant. Our approach compares favorably to state-of-the-art approaches and can be implemented in a simple web application for a login use case.
 \end{abstract}
-
-% Mengubah keterangan `Index terms` ke bahasa indonesia.
-% Hapus bagian ini untuk mengembalikan ke format awal.
-\renewcommand\IEEEkeywordsname{Kata kunci}
 
 \begin{IEEEkeywords}
 
   % Ubah kata-kata berikut sesuai dengan kata kunci dari penelitian.
-  Roket, Anti-gravitasi, Energi, Angkasa.
+  SQL injection (SQLi), keyword filtering, blacklist, machine learning, long short-term memory (LSTM)
 
 \end{IEEEkeywords}
